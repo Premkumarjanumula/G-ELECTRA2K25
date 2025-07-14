@@ -1,0 +1,54 @@
+/* IMAGE GLITCH: 2 Glitches Only */
+.glitch-logo.glitching {
+  animation: glitchImage 0.8s steps(1) 2;
+}
+
+@keyframes glitchImage {
+  0%, 100% { background-image: url('../public/g-electra.png'); }
+  40% { background-image: url('../public/glitch1.png'); }
+  50% { background-image: url('../public/g-electra.png'); }
+  70% { background-image: url('../public/glitch2.png'); }
+  80% { background-image: url('../public/glitch3.png'); }
+}
+
+/* TEXT GLITCH (Your Original Style) */
+.glitch-text {
+  font-size: 3.5em;
+  color: #0ff;
+  position: relative;
+  letter-spacing: 5px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background: transparent;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+}
+
+.glitch-text::before {
+  color: #f0f;
+  animation: glitchTop 2s infinite linear;
+}
+
+.glitch-text::after {
+  color: #0ff;
+  animation: glitchBottom 2s infinite linear;
+}
+
+@keyframes glitchTop {
+  0%   { clip: rect(2px, 9999px, 10px, 0); transform: translate(2px, -2px); }
+  50%  { clip: rect(12px, 9999px, 14px, 0); transform: translate(-2px, 2px); }
+  100% { clip: rect(5px, 9999px, 18px, 0); transform: translate(1px, -1px); }
+}
+
+@keyframes glitchBottom {
+  0%   { clip: rect(25px, 9999px, 40px, 0); transform: translate(-2px, 0); }
+  50%  { clip: rect(50px, 9999px, 65px, 0); transform: translate(2px, 2px); }
+  100% { clip: rect(35px, 9999px, 50px, 0); transform: translate(-1px, 1px); }
+}
