@@ -1,0 +1,5 @@
+git status               # See what’s changed
+git add .                # Stage all changes
+git commit -m "your message here"   # Commit changes
+git push                 # Push to GitHub
+git pull origin main
