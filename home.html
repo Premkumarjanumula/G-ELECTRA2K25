@@ -6,8 +6,17 @@
   <title>G-ELECTRA — Home</title>
   <link rel="stylesheet" href="css/home.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <script type="module" src="https://unpkg.com/@splinetool/viewer@1.10.39/build/spline-viewer.js"></script>
 </head>
 <body>
+
+  <!-- Background Spline 3D -->
+  <div class="spline-container">
+    <spline-viewer 
+      url="https://prod.spline.design/LuKbH5yeaakmzX57/scene.splinecode" 
+      interaction-events>
+    </spline-viewer>
+  </div>
 
   <!-- Glassmorphic Navbar -->
   <nav class="navbar">
@@ -16,26 +25,28 @@
       <span>G-ELECTRA</span>
     </div>
     <ul class="nav-links">
-      <li><a href="home.html">Home</a></li>
-      <li><a href="features.html">Features</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="home.html" class="btn-glass">Home</a></li>
+      <li><a href="features.html" class="btn-glass">Features</a></li>
+      <li><a href="about.html" class="btn-glass">About</a></li>
+      <li><a href="contact.html" class="btn-glass">Contact</a></li>
     </ul>
-
-    <!-- Sign In / Sign Up Button -->
-    <div class="auth-buttons">
-      <a href="signin.html" class="btn-glass">Sign In</a>
-      <a href="signup.html" class="btn-glass alt">Sign Up</a>
-    </div>
   </nav>
 
   <!-- Footer -->
   <footer class="footer">
-    <p>&copy; 2025 G-ELECTRA. All rights reserved.</p>
-    <div class="social-icons">
-      <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-      <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+    <div class="footer-section footer-left">
+      <a href="signin.html" class="btn-glass">Sign In</a>
+      <a href="signup.html" class="btn-glass alt">Sign Up</a>
+    </div>
+    <div class="footer-section footer-center">
+      <p>&copy; 2025 G-ELECTRA. All rights reserved.</p>
+    </div>
+    <div class="footer-section footer-right">
+      <div class="social-icons">
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+      </div>
     </div>
   </footer>
 
