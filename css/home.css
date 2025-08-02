@@ -8,9 +8,12 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #090a1a 100%);
+  background: linear-gradient(135deg, #1a0033, #280046, #00003f);
   color: #ffffff;
   font-family: 'Orbitron', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* 🔮 Glassmorphic Navbar */
@@ -23,22 +26,25 @@ body {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: rgba(10, 10, 20, 0.3); /* transparent glass */
-  border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+  background: rgba(30, 0, 60, 0.3);
+  border-bottom: 1px solid rgba(226, 0, 255, 0.2);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+  box-shadow: 0 0 20px rgba(226, 0, 255, 0.3);
   border-radius: 0 0 16px 16px;
 }
 
 .navbar .logo {
   font-size: 1.6rem;
   font-weight: bold;
-  color: #0ff;
-  text-shadow: 0 0 8px #0ff;
+  background: linear-gradient(45deg, #5d00ff, #007fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 8px #007fff;
 }
 
-/* Links */
 .nav-links {
   display: flex;
   gap: 2rem;
@@ -47,11 +53,15 @@ body {
 
 .nav-links a {
   text-decoration: none;
-  color: #fff;
   font-size: 1rem;
   padding: 0.3rem 0;
   position: relative;
   transition: color 0.3s ease;
+  background: linear-gradient(45deg, #5d00ff, #007fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
 }
 
 .nav-links a::after {
@@ -61,15 +71,14 @@ body {
   bottom: -3px;
   width: 100%;
   height: 2px;
-  background: #0ff;
+  background: linear-gradient(90deg, #5d00ff, #007fff);
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.3s ease;
 }
 
 .nav-links a:hover {
-  color: #0ff;
-  text-shadow: 0 0 6px #0ff;
+  text-shadow: 0 0 6px #007fff;
 }
 
 .nav-links a:hover::after {
@@ -77,41 +86,49 @@ body {
   transform-origin: left;
 }
 
-/* Main content */
-.main-content {
-  padding: 5rem 2rem;
-  text-align: center;
-}
-
-.main-content h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-  color: #0ff;
-  text-shadow: 0 0 10px #0ff;
-}
-
-.main-content p {
-  font-size: 1.2rem;
-  letter-spacing: 1px;
-  color: #ccc;
-}
-
 /* Footer */
 .footer {
-  background-color: rgba(10, 10, 20, 0.4);
+  background-color: rgba(30, 0, 60, 0.4);
   color: #ffffff;
   text-align: center;
-  padding: 1.5rem 0;
-  border-top: 1px solid rgba(0, 255, 255, 0.2);
-  box-shadow: 0 -2px 10px rgba(0, 255, 255, 0.3);
+  padding: 1.5rem 0 2.5rem;
+  border-top: 1px solid transparent;
+  background-clip: padding-box;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
   position: fixed;
   bottom: 0;
   width: 100%;
+  box-shadow: 0 -2px 20px rgba(225, 0, 255, 0.5);
 }
 
-/* --- Auth Buttons --- */
+.footer p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.2rem;
+}
+
+.footer .social-icons a {
+  font-size: 1.3rem;
+  color: transparent;
+  background: linear-gradient(45deg, #5d00ff, #007fff);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s, text-shadow 0.3s;
+}
+
+.footer .social-icons a:hover {
+  transform: scale(1.2);
+  text-shadow: 0 0 8px #5d00ff, 0 0 12px #007fff;
+}
+
+/* Auth Buttons */
 .auth-buttons {
   display: flex;
   gap: 1rem;
@@ -119,21 +136,21 @@ body {
 
 .btn-glass {
   padding: 0.5rem 1.2rem;
-  border: 1px solid #0ff;
-  color: #0ff;
+  border: 1px solid #e100ff;
+  color: #e100ff;
   text-decoration: none;
   border-radius: 12px;
   font-size: 0.9rem;
   backdrop-filter: blur(10px);
-  background: rgba(0, 255, 255, 0.08);
-  box-shadow: 0 0 10px rgba(0, 255, 255, 0.2);
+  background: rgba(225, 0, 255, 0.08);
+  box-shadow: 0 0 10px rgba(225, 0, 255, 0.2);
   transition: all 0.3s ease;
 }
 
 .btn-glass:hover {
-  background: rgba(0, 255, 255, 0.2);
+  background: rgba(225, 0, 255, 0.2);
   color: #fff;
-  box-shadow: 0 0 20px #0ff;
+  box-shadow: 0 0 20px #e100ff;
 }
 
 .btn-glass.alt {
@@ -144,6 +161,19 @@ body {
 
 .btn-glass.alt:hover {
   background: rgba(255, 255, 255, 0.15);
-  color: #0ff;
-  box-shadow: 0 0 20px #0ff;
+  color: #e100ff;
+  box-shadow: 0 0 20px #e100ff;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Increased gap between logo and text */
+}
+
+.logo-img {
+  height: 55px;  /* Increased logo size */
+  width: 55px;
+  object-fit: contain;
+  filter: drop-shadow(0 0 6px #007fff);
 }

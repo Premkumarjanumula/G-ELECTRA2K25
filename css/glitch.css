@@ -1,4 +1,4 @@
-/* IMAGE GLITCH: 2 Glitches Only */
+/* IMAGE GLITCH */
 .glitch-logo.glitching {
   animation: glitchImage 0.8s steps(1) 2;
 }
@@ -11,13 +11,13 @@
   80% { background-image: url('../public/glitch3.png'); }
 }
 
-/* TEXT GLITCH (Your Original Style) */
+/* TEXT GLITCH */
 .glitch-text {
   font-size: 3.5em;
-  color: #0ff;
+  color: #d580ff;
   position: relative;
   letter-spacing: 5px;
-  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  text-shadow: 0 0 5px #e100ff, 0 0 15px #b84dff;
 }
 
 .glitch-text::before,
@@ -32,12 +32,12 @@
 }
 
 .glitch-text::before {
-  color: #f0f;
+  color: #ff00ff;
   animation: glitchTop 2s infinite linear;
 }
 
 .glitch-text::after {
-  color: #0ff;
+  color: #00bfff;
   animation: glitchBottom 2s infinite linear;
 }
 

@@ -8,7 +8,7 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #090a1a 100%);
+  background: linear-gradient(135deg, #1a0033, #3a0066, #000040);
   font-family: 'Orbitron', sans-serif;
   display: flex;
   align-items: center;
@@ -39,7 +39,7 @@ body {
   left: -20%;
   width: 140%;
   height: 140%;
-  background: radial-gradient(circle, #0ff 0%, transparent 70%);
+  background: radial-gradient(circle, #d580ff 0%, transparent 70%);
   filter: blur(35px);
   opacity: 0.7;
   z-index: 0;
@@ -55,7 +55,7 @@ body {
 
 /* Subtext + Loader */
 .subtext {
-  color: #fff;
+  color: #d7b3ff;
   font-size: 1.4em;
   margin-top: 20px;
   letter-spacing: 2px;
@@ -66,7 +66,7 @@ body {
   margin-left: 10px;
   width: 1em;
   height: 1em;
-  border: 3px solid #0ff;
+  border: 3px solid #e100ff;
   border-radius: 50%;
   border-top-color: transparent;
   animation: spin 0.8s linear infinite;
@@ -76,15 +76,13 @@ body {
   to { transform: rotate(360deg); }
 }
 
-/* enter site button  */
-
-/* BUTTON OVERLAY STYLING */
+/* ENTER SITE OVERLAY */
 .start-overlay {
   position: fixed;
   top: 0; left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.95);
+  background: rgba(10, 0, 30, 0.95);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -94,16 +92,16 @@ body {
 #start-btn {
   padding: 1em 2.5em;
   font-size: 1.3em;
-  background: #0ff;
-  color: #000;
+  background: #c84cff;
+  color: #fff;
   font-family: 'Orbitron', sans-serif;
   border: none;
   cursor: pointer;
-  box-shadow: 0 0 15px #0ff, 0 0 25px #0ff;
+  box-shadow: 0 0 15px #d580ff, 0 0 25px #e100ff;
   transition: background 0.3s ease, box-shadow 0.3s ease;
 }
 
 #start-btn:hover {
-  background: #00f0f0;
-  box-shadow: 0 0 25px #0ff, 0 0 45px #0ff;
+  background: #b03aff;
+  box-shadow: 0 0 25px #e100ff, 0 0 45px #9a00ff;
 }
